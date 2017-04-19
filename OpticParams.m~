@@ -1,0 +1,4 @@
+%% Optic Parameters
+
+% Physical parameters of optic
+diam = 50e-3;       % diameter of optic (mm)
