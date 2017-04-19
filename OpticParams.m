@@ -13,7 +13,7 @@ optic.lambda = 0.8        % wavelength of Ti:Sapphire (um)
 
 % Photolithography Params
 optic.numLayers = 8       % How many layers are to be used in the optic
-optic.resolution = 3.0    % minimum feature size which can be etched (um)
+optic.resolution = 100.0    % minimum feature size which can be etched (um)
 
 % Computation Parameters
 npts = 1000                % How many points are to be used radially
@@ -24,6 +24,8 @@ npts = 1000                % How many points are to be used radially
 % Fourier Optic Profile
 [fourProf,steppedFourProf] = findModProfile(phase,optic);
 
+% Mask Construction
+[X,masks] = generateMask(steppedFourProf,optic)
 
 
 % Plots
