@@ -1,4 +1,26 @@
 %% Optic Parameters
 
 % Physical parameters of optic
-diam = 50e-3;       % diameter of optic (mm)
+optic.diam    = 50.8;  % diameter of optic (mm)
+optic.type    = 'axilens'; % which kind of optic
+optic.alpha   = 5.0;      % approach angle of axicon rays (deg) [for 'axicon']
+optic.f0      = 385.0;    % distance to axilens focus (mm) [for 'axilens']
+optic.Dz      = 50.0;     % length of axilens focus (mm) [for 'axilens']
+
+% Beam Parameters
+optic.lambda = 0.8        % wavelength of Ti:Sapphire (um)
+
+% Photolithography Params
+optic.numLayers = 2       % How many layers are to be used in the optic
+optic.resolution = 3.0    % minimum feature size which can be etched (um)
+
+% Computation Parameters
+npts = 100                % How many points are to be used radially
+
+% Phase profile required on optic
+[r,phase] = findPhaseProfile(npts,optic);    % find the radial phase profile required
+
+
+
+
+
