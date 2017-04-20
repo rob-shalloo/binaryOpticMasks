@@ -1,4 +1,4 @@
-function [X,masks] = generateMask(steppedProfile,optic)
+function [X,masks,maskGrid] = generateMask(steppedProfile,optic)
 
 resolution      =  optic.resolution;
 diam            = optic.diam;

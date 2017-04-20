@@ -2,7 +2,7 @@ function [profile,steppedProfile] = findModProfile(phase,optic)
 
 lambda      = optic.lambda;
 n           = optic.n;
-numLayers   = optic.numLayers
+numLayers   = optic.numLayers;
 
 % Etch Depth
 piShift = lambda/(2*(n-1));             % Length of material corresponding to pi phase shift
